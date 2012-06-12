@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Demo.Restful" Label="Demo.Restful" Category="Project" />
+    <Node Id="EntityFramework 4.3.1" Label="EntityFramework 4.3.1" Category="Package" />
+    <Node Id="log4net 2.0.0" Label="log4net 2.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.20505.0" Label="Microsoft.AspNet.Mvc 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.20505.0" Label="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 4.0.20505.0" Label="Microsoft.AspNet.WebApi 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Label="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Label="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.20505.0" Label="Microsoft.AspNet.WebPages 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.Net.Http 2.0.20505.0" Label="Microsoft.Net.Http 2.0.20505.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="NakedObjects.Framework 4.1.0" Label="NakedObjects.Framework 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.Ide 4.1.0" Label="NakedObjects.Ide 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.ProgrammingModel 4.1.0" Label="NakedObjects.ProgrammingModel 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.Surface 0.5.0" Label="NakedObjects.Surface 0.5.0" Category="Package" />
+    <Node Id="NakedObjects.Surface.Nof4 0.9.0" Label="NakedObjects.Surface.Nof4 0.9.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 4.5.7" Label="Newtonsoft.Json 4.5.7" Category="Package" />
+    <Node Id="RestfulObjects.Mvc 0.23.0" Label="RestfulObjects.Mvc 0.23.0" Category="Package" />
+    <Node Id="RestfulObjects.Server 0.17.0" Label="RestfulObjects.Server 0.17.0" Category="Package" />
+    <Node Id="WebActivator 1.5.1" Label="WebActivator 1.5.1" Category="Package" />
+    <Node Id="Demo.Bom.Customers" Label="Demo.Bom.Customers" Category="Project" />
+    <Node Id="NakedObjects.Ide 4.1.0" Label="NakedObjects.Ide 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.ProgrammingModel 4.1.0" Label="NakedObjects.ProgrammingModel 4.1.0" Category="Package" />
+    <Node Id="Demo.App" Label="Demo.App" Category="Project" />
+    <Node Id="EntityFramework 4.3.1" Label="EntityFramework 4.3.1" Category="Package" />
+    <Node Id="jQuery 1.5.1" Label="jQuery 1.5.1" Category="Package" />
+    <Node Id="jQuery.UI.Combined 1.8.11" Label="jQuery.UI.Combined 1.8.11" Category="Package" />
+    <Node Id="jQuery.Validation 1.8.0" Label="jQuery.Validation 1.8.0" Category="Package" />
+    <Node Id="jQuery.vsdoc 1.5.1" Label="jQuery.vsdoc 1.5.1" Category="Package" />
+    <Node Id="log4net 2.0.0" Label="log4net 2.0.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Modernizr 1.7" Label="Modernizr 1.7" Category="Package" />
+    <Node Id="NakedObjects.Framework 4.1.0" Label="NakedObjects.Framework 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.Ide 4.1.0" Label="NakedObjects.Ide 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.Mvc 4.1.0" Label="NakedObjects.Mvc 4.1.0" Category="Package" />
+    <Node Id="NakedObjects.ProgrammingModel 4.1.0" Label="NakedObjects.ProgrammingModel 4.1.0" Category="Package" />
+    <Node Id="WebActivator 1.5.1" Label="WebActivator 1.5.1" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20505.0" Target="Microsoft.AspNet.WebPages 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20505.0" Target="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 4.0.20505.0" Target="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Target="Microsoft.Net.Http 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Target="Newtonsoft.Json 4.5.7" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Target="Microsoft.AspNet.WebApi.Client 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20505.0" Target="Microsoft.AspNet.WebApi.Core 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20505.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20505.0" Target="Microsoft.AspNet.Razor 2.0.20505.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="NakedObjects.ProgrammingModel 4.1.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="log4net 2.0.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="EntityFramework 4.3.1" Category="Package Dependency" />
+    <Link Source="NakedObjects.ProgrammingModel 4.1.0" Target="NakedObjects.Ide 4.1.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Surface.Nof4 0.9.0" Target="NakedObjects.Framework 4.1.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Surface.Nof4 0.9.0" Target="NakedObjects.Surface 0.5.0" Category="Package Dependency" />
+    <Link Source="RestfulObjects.Mvc 0.23.0" Target="NakedObjects.Surface 0.5.0" Category="Package Dependency" />
+    <Link Source="RestfulObjects.Mvc 0.23.0" Target="Microsoft.AspNet.WebApi 4.0.20505.0" Category="Package Dependency" />
+    <Link Source="RestfulObjects.Server 0.17.0" Target="NakedObjects.Surface.Nof4 0.9.0" Category="Package Dependency" />
+    <Link Source="RestfulObjects.Server 0.17.0" Target="RestfulObjects.Mvc 0.23.0" Category="Package Dependency" />
+    <Link Source="RestfulObjects.Server 0.17.0" Target="WebActivator 1.5.1" Category="Package Dependency" />
+    <Link Source="WebActivator 1.5.1" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Demo.Restful" Target="Microsoft.AspNet.Mvc 4.0.20505.0" Category="Installed Package" />
+    <Link Source="Demo.Restful" Target="RestfulObjects.Server 0.17.0" Category="Installed Package" />
+    <Link Source="NakedObjects.ProgrammingModel 4.1.0" Target="NakedObjects.Ide 4.1.0" Category="Package Dependency" />
+    <Link Source="Demo.Bom.Customers" Target="NakedObjects.ProgrammingModel 4.1.0" Category="Installed Package" />
+    <Link Source="jQuery.UI.Combined 1.8.11" Target="jQuery 1.5.1" Category="Package Dependency" />
+    <Link Source="jQuery.Validation 1.8.0" Target="jQuery 1.5.1" Category="Package Dependency" />
+    <Link Source="jQuery.vsdoc 1.5.1" Target="jQuery 1.5.1" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="NakedObjects.ProgrammingModel 4.1.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="log4net 2.0.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Framework 4.1.0" Target="EntityFramework 4.3.1" Category="Package Dependency" />
+    <Link Source="NakedObjects.Mvc 4.1.0" Target="NakedObjects.Framework 4.1.0" Category="Package Dependency" />
+    <Link Source="NakedObjects.Mvc 4.1.0" Target="WebActivator 1.5.1" Category="Package Dependency" />
+    <Link Source="NakedObjects.ProgrammingModel 4.1.0" Target="NakedObjects.Ide 4.1.0" Category="Package Dependency" />
+    <Link Source="WebActivator 1.5.1" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Demo.App" Target="jQuery.UI.Combined 1.8.11" Category="Installed Package" />
+    <Link Source="Demo.App" Target="jQuery.Validation 1.8.0" Category="Installed Package" />
+    <Link Source="Demo.App" Target="jQuery.vsdoc 1.5.1" Category="Installed Package" />
+    <Link Source="Demo.App" Target="Modernizr 1.7" Category="Installed Package" />
+    <Link Source="Demo.App" Target="NakedObjects.Mvc 4.1.0" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
