@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Demo.Dom.CoffeeShop.Order">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="_additions" Hidden="true" />
+      <Method Name="Choices0Add" Hidden="true" />
+      <Method Name="Choices0Remove" Hidden="true" />
+      <Property Name="Container" Hidden="true" />
+      <Method Name="DefaultAdd" Hidden="true" />
+      <Method Name="DefaultRemove" Hidden="true" />
+      <Property Name="DrinkSku" Hidden="true" />
+      <Method Name="HideAdd" Hidden="true" />
+      <Method Name="HideCancel" Hidden="true" />
+      <Method Name="HidePay" Hidden="true" />
+      <Method Name="HideReceiveDrink" Hidden="true" />
+      <Method Name="HideRemove" Hidden="true" />
+      <Method Name="IsBaristaState" Hidden="true" />
+      <Method Name="IsCustomerState" Hidden="true" />
+      <Property Name="Products" Hidden="true" />
+      <Method Name="Title" Hidden="true" />
+      <Method Name="ValidateAdd" Hidden="true" />
+      <Method Name="ValidateRemove" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>hEIgIAQAQQwAAksgUAACBAQgwCAAAgAAAAAQEAAAAEQ=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Drink" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Additions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Demo.Dom.CoffeeShop.OrderAddition">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <Members>
+      <Property Name="Container" Hidden="true" />
+      <Property Name="OrderNum" Hidden="true" />
+      <Property Name="ProductSku" Hidden="true" />
+      <Method Name="Title" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAECAAQAAAAAAEAAIAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderAddition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Demo.Dom.CoffeeShop.Product">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="Container" Hidden="true" />
+      <Method Name="Title" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAQAAAEAAAAAAAAQAAAAAAgAAEAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dom.CoffeeShop.ProductCatalog">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="Container" Hidden="true" />
+      <Method Name="LookupByName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAQAAAA=</HashCode>
+      <FileName>Source\ProductCatalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dom.CoffeeShop.CustomerServices">
+    <Position X="0.5" Y="2.25" Width="1.75" />
+    <Members>
+      <Method Name="Choices0PlaceOrder" Hidden="true" />
+      <Method Name="Choices0PlaceOrderByName" Hidden="true" />
+      <Property Name="Container" Hidden="true" />
+      <Method Name="Default1PlaceOrder" Hidden="true" />
+      <Method Name="Default1PlaceOrderByName" Hidden="true" />
+      <Property Name="Products" Hidden="true" />
+      <Method Name="ValidatePlaceOrder" Hidden="true" />
+      <Method Name="ValidatePlaceOrderByName" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAgAAQAEEAAAgAAAAAAQAAAAABAAIAAAEAAAAAAAJQ=</HashCode>
+      <FileName>Source\CustomerServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Demo.Dom.CoffeeShop.BaristaServices">
+    <Position X="0.5" Y="3.75" Width="1.75" />
+    <Members>
+      <Property Name="Container" Hidden="true" />
+      <Property Name="Products" Hidden="true" />
+      <Method Name="ValidateChooseOrder" Hidden="true" />
+      <Method Name="ValidateDrinkMade" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAAAAAAAAAACAQAQAAAAAAAAAEAAAAAAAAAAQ=</HashCode>
+      <FileName>Source\BaristaServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

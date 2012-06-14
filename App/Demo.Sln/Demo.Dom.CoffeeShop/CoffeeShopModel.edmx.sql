@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 06/12/2012 12:01:40
--- Generated from EDMX file: D:\GITHUB\danhaywood\nomvc-ronet-demo\App\Demo.Sln\Demo.Dom.CoffeeShop\CoffeeShopModel.edmx
+-- Date Created: 06/12/2012 22:29:32
+-- Generated from EDMX file: D:\GITHUB\danhaywood\dotnet-coffeeshop\App\Demo.Sln\Demo.Dom.CoffeeShop\CoffeeShopModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -23,8 +23,8 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_OrderAdditions_Product]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[OrderAdditions] DROP CONSTRAINT [FK_OrderAdditions_Product];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Order_OrderAdditions]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[OrderAdditions] DROP CONSTRAINT [FK_Order_OrderAdditions];
+IF OBJECT_ID(N'[dbo].[FK_Order_OrderAddition]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[OrderAdditions] DROP CONSTRAINT [FK_Order_OrderAddition];
 GO
 
 -- --------------------------------------------------
@@ -56,19 +56,20 @@ GO
 
 -- Creating table 'Orders'
 CREATE TABLE [dbo].[Orders] (
-    [OrderId] uniqueidentifier  NOT NULL,
+    [OrderNum] int IDENTITY(1,1) NOT NULL,
     [DrinkSku] nchar(8)  NOT NULL,
     [Price] decimal(8,2)  NOT NULL,
+    [CustomerName] nvarchar(max)  NOT NULL,
     [CustomerState] tinyint  NOT NULL,
     [BaristaState] tinyint  NOT NULL,
-    [CustomerName] nvarchar(max)  NOT NULL
+    [PlacedOn] datetime  NOT NULL
 );
 GO
 
 -- Creating table 'OrderAdditions'
 CREATE TABLE [dbo].[OrderAdditions] (
-    [ProductSku] nchar(8)  NOT NULL,
-    [OrderId] uniqueidentifier  NOT NULL
+    [OrderNum] int  NOT NULL,
+    [ProductSku] nchar(8)  NOT NULL
 );
 GO
 
@@ -82,16 +83,16 @@ ADD CONSTRAINT [PK_Products]
     PRIMARY KEY CLUSTERED ([Sku] ASC);
 GO
 
--- Creating primary key on [OrderId] in table 'Orders'
+-- Creating primary key on [OrderNum] in table 'Orders'
 ALTER TABLE [dbo].[Orders]
 ADD CONSTRAINT [PK_Orders]
-    PRIMARY KEY CLUSTERED ([OrderId] ASC);
+    PRIMARY KEY CLUSTERED ([OrderNum] ASC);
 GO
 
--- Creating primary key on [ProductSku], [OrderId] in table 'OrderAdditions'
+-- Creating primary key on [OrderNum], [ProductSku] in table 'OrderAdditions'
 ALTER TABLE [dbo].[OrderAdditions]
 ADD CONSTRAINT [PK_OrderAdditions]
-    PRIMARY KEY NONCLUSTERED ([ProductSku], [OrderId] ASC);
+    PRIMARY KEY NONCLUSTERED ([OrderNum], [ProductSku] ASC);
 GO
 
 -- --------------------------------------------------
@@ -119,20 +120,20 @@ ADD CONSTRAINT [FK_OrderAdditions_Product]
     REFERENCES [dbo].[Products]
         ([Sku])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_OrderAdditions_Product'
+CREATE INDEX [IX_FK_OrderAdditions_Product]
+ON [dbo].[OrderAdditions]
+    ([ProductSku]);
 GO
 
--- Creating foreign key on [OrderId] in table 'OrderAdditions'
+-- Creating foreign key on [OrderNum] in table 'OrderAdditions'
 ALTER TABLE [dbo].[OrderAdditions]
-ADD CONSTRAINT [FK_Order_OrderAdditions]
-    FOREIGN KEY ([OrderId])
+ADD CONSTRAINT [FK_Order_OrderAddition]
+    FOREIGN KEY ([OrderNum])
     REFERENCES [dbo].[Orders]
-        ([OrderId])
+        ([OrderNum])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
-
--- Creating non-clustered index for FOREIGN KEY 'FK_Order_OrderAdditions'
-CREATE INDEX [IX_FK_Order_OrderAdditions]
-ON [dbo].[OrderAdditions]
-    ([OrderId]);
 GO
 
 -- --------------------------------------------------

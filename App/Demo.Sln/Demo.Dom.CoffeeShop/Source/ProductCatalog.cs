@@ -8,12 +8,10 @@ namespace Demo.Dom.CoffeeShop
     /// Customer repo.
     /// </summary>
     [DisplayName("Products")]
+    [IconName("icons/Product.png")]
     public class ProductCatalog
     {
-        #region Injected Services
-        public IDomainObjectContainer Container { set; protected get; }
-        #endregion
-
+        [MemberOrder(10)]
         [PageSize(25)]
         public IQueryable<Product> AllDrinks()
         {
@@ -22,6 +20,7 @@ namespace Demo.Dom.CoffeeShop
                    select p;
         }
 
+        [MemberOrder(20)]
         [PageSize(25)]
         public IQueryable<Product> AllAdditions()
         {
@@ -37,6 +36,10 @@ namespace Demo.Dom.CoffeeShop
                    where p.Name == name
                    select p).FirstOrDefault();
         }
+
+        #region Injected Services
+        public IDomainObjectContainer Container { set; protected get; }
+        #endregion
 
     }
 }

@@ -10,10 +10,10 @@
     <%: Html.History(null, true)%>   
     <h2><%: Html.SystemMessages() %></h2>
     <br/>
-    <p>
+    <!-- p>
         Please note that, by default, the Date Picker for date-input fields uses the UK date format (dd/mm/yy). To change this, see comments in the
         Views > Shared > Site.WithServices.Master
-    </p>
+    </p -->
 
     <% var warnings = global::NakedObjects.Core.Context.NakedObjectsContext.InitialisationWarnings; 
        if (warnings.Count() > 0) {

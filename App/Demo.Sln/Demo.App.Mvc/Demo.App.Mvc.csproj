@@ -135,6 +135,11 @@
     <Content Include="Content\default.png" />
     <Content Include="Content\First-disabled.png" />
     <Content Include="Content\First.png" />
+    <Content Include="Content\icons\Barista.png" />
+    <Content Include="Content\icons\Customer.png" />
+    <Content Include="Content\icons\Product.png" />
+    <Content Include="Content\icons\Order.png" />
+    <Content Include="Content\icons\OrderAddition.png" />
     <Content Include="Content\Last-disabled.png" />
     <Content Include="Content\Last.png" />
     <Content Include="Content\List.png" />

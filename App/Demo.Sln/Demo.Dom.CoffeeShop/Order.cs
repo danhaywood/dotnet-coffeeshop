@@ -9,9 +9,9 @@ namespace Demo.Dom.CoffeeShop
     {
     
         #region Primitive Properties
-        #region OrderId (Guid)
+        #region OrderNum (Int32)
     [MemberOrder(100)]
-        public virtual System.Guid  OrderId {get; set;}
+        public virtual int  OrderNum {get; set;}
 
         #endregion
         #region DrinkSku (String)
@@ -24,19 +24,24 @@ namespace Demo.Dom.CoffeeShop
         public virtual decimal  Price {get; set;}
 
         #endregion
-        #region CustomerState (Byte)
+        #region CustomerName (String)
     [MemberOrder(130)]
+        public virtual string  CustomerName {get; set;}
+
+        #endregion
+        #region CustomerState (Byte)
+    [MemberOrder(140)]
         public virtual byte  CustomerState {get; set;}
 
         #endregion
         #region BaristaState (Byte)
-    [MemberOrder(140)]
+    [MemberOrder(150)]
         public virtual byte  BaristaState {get; set;}
 
         #endregion
-        #region CustomerName (String)
-    [MemberOrder(150)]
-        public virtual string  CustomerName {get; set;}
+        #region PlacedOn (DateTime)
+    [MemberOrder(160), Mask("d")]
+        public virtual System.DateTime  PlacedOn {get; set;}
 
         #endregion
 
@@ -44,7 +49,7 @@ namespace Demo.Dom.CoffeeShop
         #region Navigation Properties
         #region Drink (Product)
     		
-    [MemberOrder(160)]
+    [MemberOrder(170)]
     	public virtual Product Drink {get; set;}
 
         #endregion
@@ -52,7 +57,7 @@ namespace Demo.Dom.CoffeeShop
     		
     	    private ICollection<OrderAddition> _additions = new List<OrderAddition>();
     		
-    		[MemberOrder(170), Disabled]
+    		[MemberOrder(180), Disabled]
         public virtual ICollection<OrderAddition> Additions
         {
             get

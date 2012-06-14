@@ -5,7 +5,7 @@ namespace Demo.Dom.CoffeeShop
 {
 
     [MetadataType(typeof(Product_Metadata))]
-    [IconName("icons/Product.gif")]
+    [IconName("icons/Product.png")]
     public partial class Product
     {
 

@@ -9,29 +9,29 @@ namespace Demo.Dom.CoffeeShop
     {
     
         #region Primitive Properties
-        #region ProductSku (String)
-    [MemberOrder(100), StringLength(8)]
-        public virtual string  ProductSku {get; set;}
+        #region OrderNum (Int32)
+    [MemberOrder(100)]
+        public virtual int  OrderNum {get; set;}
 
         #endregion
-        #region OrderId (Guid)
-    [MemberOrder(110)]
-        public virtual System.Guid  OrderId {get; set;}
+        #region ProductSku (String)
+    [MemberOrder(110), StringLength(8)]
+        public virtual string  ProductSku {get; set;}
 
         #endregion
 
         #endregion
         #region Navigation Properties
-        #region Product (Product)
-    		
-    [MemberOrder(120)]
-    	public virtual Product Product {get; set;}
-
-        #endregion
         #region Order (Order)
     		
-    [MemberOrder(130)]
+    [MemberOrder(120)]
     	public virtual Order Order {get; set;}
+
+        #endregion
+        #region Product (Product)
+    		
+    [MemberOrder(130)]
+    	public virtual Product Product {get; set;}
 
         #endregion
 

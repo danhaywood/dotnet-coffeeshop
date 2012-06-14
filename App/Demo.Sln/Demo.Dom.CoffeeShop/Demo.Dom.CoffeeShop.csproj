@@ -111,6 +111,7 @@
     <Compile Include="Source\BaristaServices.cs" />
     <Compile Include="Source\CustomerServices.cs" />
     <Compile Include="Source\Order.cs" />
+    <Compile Include="Source\OrderAddition.cs" />
     <Compile Include="Source\OrderStates.cs" />
     <Compile Include="Source\ProductCatalog.cs" />
     <Compile Include="Source\Product.cs" />
@@ -129,6 +130,7 @@
       <LastGenOutput>CoffeeShopModel.Types.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Source\CoffeeShop.cd" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

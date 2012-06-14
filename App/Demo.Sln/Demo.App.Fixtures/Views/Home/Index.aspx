@@ -28,6 +28,7 @@
                         </li>
                     </ul>
                 </li>
+                <!--
                 <li id="stylesheet">
                     <p>Stylesheet:</p>
                     <ul>
@@ -39,6 +40,7 @@
                         </li>
                     </ul>
                 </li>
+                -->
             </ul>
         
     </div>

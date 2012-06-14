@@ -20,7 +20,7 @@
         <div id="header">
             <% if (!Html.ViewContext.HttpContext.Request.IsAjaxRequest()) {%>    
                 <div id="title">
-                    <h1>Naked Objects MVC</h1>
+                    <h1>Coffee Shop</h1>
                 </div>
                 <%:Html.ActionLink("Home", "Index", "System")%>
                 <% Html.RenderPartial("LogOnUserControl"); %>
