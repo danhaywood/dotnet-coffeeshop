@@ -13,9 +13,9 @@ namespace Demo.App.RestfulObjects.App_Start {
 
 		protected override IServicesInstaller MenuServices {
 			get { return new ServicesInstaller(
-                                    new ProductCatalog(),
-                                    new CustomerServices());
-            }
+                                                     new ProductCatalog(),
+                                                     new CustomerServices()
+                ); }
 		}
 
 		protected override IServicesInstaller ContributedActions {
